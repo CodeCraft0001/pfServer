@@ -1,0 +1,80 @@
+->Express Server
+
+-npm init -y : to initialize node.js Server
+-npm i express : to install express(also node_modules)
+
+.env - runtime envtal file
+
+-npm i dotenv
+-npm i cors - corse[cross origin resource sharing](its a builtin middleware(a function that can access and process requests
+                before it hits the Server))
+
+-->S/w patterns/Architecture:
+    1-MVC(Model-View-Controller)
+        Model- Component that helps to interact with db
+        View- Component whweere user interacts
+        Controller- Component which handles the working logic of Server
+    2-MVT(Model-View-Template)
+    Model- Component that helps to interact with db
+    View- Component that handles work logic. And also make response is rendered in template
+    Template- User Interface
+    etc
+
+    ->Request = Header + Body
+
+    MongoDB:==>
+        -What is MongoDB:
+            is a non-sql non-relational schemaless json-document based dbms
+
+        -What are the features 
+            >Non sql
+            >Non-relational
+            >No specific schema
+            >Data collected as JSON Documents
+            >flexible
+
+------------RDBMS------------  -----MongoDB--------
+        Database                Database
+        Table                   Collection
+        Tuple/row               Document
+        Column                  Fields
+        Primary Key             _id [12 character hexadecimal value]
+
+            ->Advantages
+                +Schemaless, Flexible, No-SQL etc
+                +Faster
+                +Scalable
+
+    =>Mongoose:
+        -its MongoDB object modeling tool
+        -for initializing schema and model for MongoDB dbs and connect to them for Database access and manipulation
+        -we can implement schema, business, validation logic..
+
+        -for installation:
+            npm i mongoose
+
+
+        =>Middleware:
+            -a special function which can act b/w server and client
+            -it can analyse/check a request before it reaches the server app
+            -syntax:
+                const middlewarefuncn=(req,res,next)=>{
+
+                }
+            -two types:
+               >appn level middleware: a middleware implented to the entire appn
+
+               >router specific middleware: a middleware specifically implemented to router
+
+->Multer:
+    -3rd party middleware that handles multiple files
+    -npm i multer
+
+->JWT - json Web Token(authentication):
+    - a token will be prrovided to a user while authentiction complets.
+    - token will be mandatory for every authorised requests
+
+    -npm i jsonwebtoken
+
+    -sign() - to generate token
+    -verify() - to verify a token
